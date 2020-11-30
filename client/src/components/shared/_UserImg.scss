@@ -1,0 +1,26 @@
+.user-img {
+    border: 0.4rem solid white;
+    border-radius: 40rem;
+    margin: 0;
+    box-shadow: var(--style-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgb(98, 60, 234);
+    background: linear-gradient(353deg, rgba(98, 60, 234, 1) 0%, rgb(162, 0, 255) 100%);
+    span {
+        font-family: var(--font-bold);
+        color: white;
+        font-size: 100%;
+        display: flex;
+        font-size: 2rem;
+    }
+
+    img {
+        display: block;
+        width: 105%;
+        height: 105%;
+        object-fit: cover;
+    }
+}

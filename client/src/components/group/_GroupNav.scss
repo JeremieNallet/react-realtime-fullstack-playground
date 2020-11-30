@@ -1,0 +1,63 @@
+.group-nav {
+    height: 100%;
+    padding: 18rem 3rem 5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: animatePannel 0.4s cubic-bezier(0.16, 0.02, 0, 1.12);
+    position: fixed;
+    overflow: auto;
+    background: white;
+    border-right: var(--style-border);
+    width: 45rem;
+    &__links {
+        width: 100%;
+        padding: 2rem 3rem;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: var(--font-bold);
+
+        svg {
+            stroke: var(--color-dark-grey);
+        }
+
+        &.active {
+            background: var(--color-light-grey);
+            border-radius: 0.8rem;
+            position: relative;
+            svg {
+                stroke: var(--color-primary);
+            }
+            span {
+                color: var(--color-primary);
+            }
+            &:after {
+                content: "";
+                background: var(--color-theme-1);
+                position: absolute;
+                left: 0;
+
+                width: 0.2rem;
+                height: 40%;
+            }
+        }
+        &--icon {
+            stroke: var(--color-dark-grey);
+        }
+        &--name {
+            color: var(--color-dark-grey);
+        }
+    }
+}
+@keyframes animatePannel {
+    from {
+        opacity: 0;
+        transform: translate3d(-2rem, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0rem, 0, 0);
+    }
+}

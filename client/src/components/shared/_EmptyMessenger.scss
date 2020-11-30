@@ -1,0 +1,38 @@
+.empty-messenger {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .container {
+        min-height: 45%;
+        min-width: 45%;
+        padding: 10rem 0rem;
+    }
+    &.m {
+        .container {
+            padding: 0;
+            margin-bottom: 10rem;
+        }
+    }
+
+    &__txt {
+        text-align: center;
+        margin-top: 1rem;
+        &--title {
+            font-family: var(--font-bold);
+            font-size: 1.7rem;
+            margin-top: 1rem;
+        }
+        &--para {
+            margin-top: 0.2rem;
+            color: var(--color-dark-grey);
+        }
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+    }
+}

@@ -1,0 +1,19 @@
+.notification-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    &.m {
+        .notification-empty {
+            &__txt {
+                padding: 0;
+            }
+        }
+    }
+
+    &__txt {
+        padding: 3rem 0;
+        color: var(--color-primary);
+    }
+}

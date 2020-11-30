@@ -1,0 +1,17 @@
+.chip {
+    position: absolute;
+    top: -0.7rem;
+    right: -0.8rem;
+    &--text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.9rem;
+        height: 1.9rem;
+        border-radius: 20rem;
+        color: white;
+        font-size: 1.2rem;
+        font-family: var(--font-regular);
+        background: red;
+    }
+}

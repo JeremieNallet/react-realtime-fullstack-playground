@@ -1,0 +1,29 @@
+.group-members {
+    max-width: 90rem;
+    margin: 0 auto 0rem auto;
+    padding: 15rem 4rem 0 4rem;
+    &.m {
+        padding: 8rem 1rem 0 1rem;
+    }
+    &__title {
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        font-family: var(--font-bold);
+    }
+    &__user-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: calc(100vh - 30rem);
+    }
+    &__load-btn {
+        margin: 1rem 0 5rem 0;
+    }
+}

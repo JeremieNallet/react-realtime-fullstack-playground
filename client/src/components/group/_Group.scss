@@ -1,0 +1,44 @@
+.group {
+    display: flex;
+    width: 100vw;
+
+    &.m {
+        flex-direction: column;
+        height: 100%;
+        .group {
+            &__nav {
+                box-shadow: none;
+                flex: initial;
+                min-height: initial;
+            }
+        }
+    }
+
+    &__loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    &__nav {
+        min-height: 100vh;
+        flex: 0 0 45rem;
+        position: relative;
+        z-index: 1;
+
+        &--title {
+            font-family: var(--font-bold);
+            position: absolute;
+            font-size: 1.7rem;
+            top: 2.6rem;
+            right: -10rem;
+            z-index: 999;
+        }
+    }
+    &__content {
+        position: relative;
+        height: 100%;
+        flex: 1;
+    }
+}

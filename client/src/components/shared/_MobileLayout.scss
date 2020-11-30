@@ -1,0 +1,25 @@
+.device-view {
+    display: flex;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+
+    width: 100vw;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__head {
+        position: fixed;
+        pointer-events: none;
+        width: 100vw;
+        z-index: 90;
+        height: 6rem;
+    }
+    &__content {
+        flex: 1;
+
+        overflow-x: hidden;
+    }
+    &__nav {
+        flex: 0 0 0rem;
+    }
+}

@@ -1,0 +1,36 @@
+.server-error {
+    background: var(--color-theme-2);
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 99999;
+    .container {
+        position: relative;
+    }
+    &__message {
+        color: white;
+    }
+    &__close {
+        position: absolute;
+        right: 3vw;
+        top: 40%;
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            cursor: pointer;
+            opacity: 0.5;
+        }
+        svg {
+            stroke: white;
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}

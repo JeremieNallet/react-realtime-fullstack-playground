@@ -1,0 +1,145 @@
+@import "../../global.scss";
+$s: 1.6rem;
+$y: 3rem;
+$b: 0;
+$d: initial;
+@mixin positioning($top, $right, $bottom, $left) {
+    position: absolute;
+    z-index: 10;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+.dashboard-ctrl {
+    position: absolute;
+    z-index: 4;
+    height: calc(100vh - 4.5rem);
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-left: $y;
+    pointer-events: none;
+
+    -ms-pointer-events: none;
+    .adding-pos {
+        opacity: 0.2;
+        pointer-events: none;
+    }
+    .ctrl {
+        pointer-events: initial;
+        -ms-pointer-events: initial;
+    }
+    &.m {
+        height: calc(100% - 2rem);
+
+        .dashboard-ctrl {
+            &--map-controls {
+                left: 1rem;
+            }
+            &--position {
+                top: 0.7rem;
+                left: 1rem;
+            }
+        }
+    }
+    &--population {
+        background: white;
+        box-shadow: var(--style-shadow);
+
+        border-radius: 20rem;
+        padding: 1rem 2.5rem;
+        font-family: var(--font-bold);
+        width: fit-content;
+        height: fit-content;
+        position: absolute;
+        right: 50%;
+
+        transform: translateX(50%);
+    }
+
+    &--position {
+        @include positioning($s, $d, $d, $y);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button {
+            &:not(:first-child) {
+                margin-left: 1rem;
+            }
+        }
+
+        .position {
+            margin-right: 0.5rem;
+        }
+        .share-btn {
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: flash 1.2s infinite ease-out;
+            font-size: 1.4rem;
+            font-family: var(--font-bold);
+            background: rgb(98, 60, 233);
+
+            background: linear-gradient(
+                90deg,
+                rgba(98, 60, 233, 1) 0%,
+                rgb(110, 43, 235) 0%,
+                rgb(155, 60, 233) 100%
+            );
+            color: white;
+            height: 4.4rem;
+            padding: 0 2.5rem;
+            border-radius: 20rem;
+            cursor: pointer;
+
+            &.remove {
+                animation: none;
+                padding: 0 1.9rem;
+                background: var(--color-theme-2);
+            }
+            &.cancel {
+                animation: none;
+                padding: 0 5rem;
+                background: var(--color-theme-2);
+            }
+            &:hover {
+                animation: none;
+                filter: brightness(130%);
+            }
+        }
+        .emoji-selector {
+            height: 100%;
+        }
+        .emoji-img {
+            width: 100%;
+            padding: 0.4rem;
+        }
+    }
+    &--map-controls {
+        width: fit-content;
+        @include positioning($d, $y, $b, $d);
+        > * {
+            margin-top: 1rem;
+        }
+        .relief {
+            display: none;
+            font-family: var(--font-bold);
+        }
+    }
+    &--chat {
+        @include positioning($d, $d, $b, $y);
+    }
+}
+@keyframes flash {
+    0% {
+        filter: brightness(100%);
+    }
+    50% {
+        filter: brightness(140%);
+    }
+}

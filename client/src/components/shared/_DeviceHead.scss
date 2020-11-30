@@ -1,0 +1,71 @@
+.device-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    padding: 0 2vw;
+    pointer-events: none;
+    &.transparent {
+        background: transparent;
+    }
+    &.shadow {
+        background: white;
+        box-shadow: var(--style-shadow);
+    }
+    &__title {
+        font-family: var(--font-bold);
+        font-size: 1.7rem;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        pointer-events: initial;
+    }
+    &__profile {
+        background: none;
+        border-radius: 100%;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0.5rem;
+        min-height: 4.5rem;
+        pointer-events: initial;
+    }
+
+    &__nav {
+        display: flex;
+        pointer-events: initial;
+        height: 100%;
+        &--link {
+            font-family: var(--font-regular);
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: stretch;
+            height: 100%;
+            &.active {
+                font-family: var(--font-bold);
+                position: relative;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 0.1rem;
+                    display: flex;
+                    background: var(--color-theme-1);
+                }
+            }
+            &:not(:last-child) {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+}

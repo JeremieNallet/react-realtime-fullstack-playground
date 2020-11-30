@@ -1,0 +1,206 @@
+@font-face {
+    font-family: "helvetica-bold";
+    src: url("./assets/fonts/HelveticaNowText-Bold.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "helvetica-regular";
+    src: url("./assets/fonts/HelveticaNowText-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@mixin media($breakpoint) {
+    @if $breakpoint == m {
+        @media screen and (max-width: 960px) {
+            @content;
+        }
+    }
+    @if $breakpoint == s {
+        @media screen and (max-width: 700px) {
+            @content;
+        }
+    }
+    @if $breakpoint == xs {
+        @media screen and (max-width: 500px) {
+            @content;
+        }
+    }
+    @if $breakpoint == small-height {
+        @media screen and (max-height: 450px) {
+            @content;
+        }
+    }
+}
+
+:root {
+    --font-bold: helvetica-bold, Arial, Helvetica, sans-serif;
+    --font-regular: helvetica-regular, Arial, Helvetica, sans-serif;
+    --color-theme-1: #623ce9;
+    --color-theme-2: #fc1e68;
+    --color-theme-3: #2dd4ba;
+    --color-primary: #2c3053;
+    --color-light-grey: #f7f8fd;
+    --color-dark-grey: #a6b1ca;
+    --color-dark-grey-alt: #afb6ca8a;
+    --color-white: #ffff;
+    --color-background: #f6f7fbee;
+    --color-backdrop: rgba(246, 249, 255, 0.842);
+    --style-border: 1px solid rgba(218, 227, 252, 0.5);
+    --style-shadow: 0 0px 6px 1px #c8d1e856;
+    --style-shadow-big: 0 10px 40px 5px rgba(200, 209, 232, 0.411);
+    --style-shadow-big-alt: 0 10px 40px 5px rgba(200, 209, 232, 0.062);
+    --style-shadow-markers: 0 0px 15px 2px #a0adcc6e;
+    --color-range-input: rgb(231, 230, 235);
+}
+@keyframes slidein {
+    0% {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    20% {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0rem;
+    box-sizing: inherit;
+    outline: none;
+    color: var(--color-primary);
+    font-weight: normal;
+}
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+html {
+    font-size: 59%;
+
+    @include media(xs) {
+        font-size: 53%;
+    }
+    @media screen and (max-width: 965px) {
+        font-size: 54%;
+    }
+}
+
+#__dontstopbelievin__ {
+    font-size: 1.6rem;
+    font-family: var(--font-regular);
+    // background: var(--color-background);
+    box-sizing: border-box;
+
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+    overscroll-behavior: none;
+}
+ul,
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+@mixin rangeStyle() {
+    input[type="range"] {
+        -webkit-appearance: none;
+        width: 100%;
+    }
+    input[type="range"]:focus {
+        outline: none;
+    }
+    input[type="range"]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 0.5rem;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px #000000;
+        background: var(--color-range-input);
+        border-radius: 39px;
+        border: 0px solid #000000;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+        box-shadow: 0px 0px 1px #000000;
+        border: 0px solid #000000;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 1.5rem;
+        background: #683af3;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -0.5rem;
+    }
+    input[type="range"]:focus::-webkit-slider-runnable-track {
+        background: var(--color-range-input);
+    }
+
+    input[type="range"]::-moz-range-track {
+        width: 100%;
+        height: 0.5rem;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px #000000;
+        background: var(--color-range-input);
+        border-radius: 39px;
+        border: 0px solid #000000;
+    }
+    input[type="range"]::-moz-range-thumb {
+        box-shadow: 0px 0px 1px #000000;
+        border: 0px solid #000000;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 1.5rem;
+        background: #683af3;
+        cursor: pointer;
+    }
+    input[type="range"]::-ms-track {
+        width: 100%;
+        height: 0.5rem;
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+    }
+    input[type="range"]::-ms-fill-lower {
+        background: var(--color-range-input);
+        border: 0px solid #000000;
+        border-radius: 78px;
+        box-shadow: 0px 0px 0px #000000;
+    }
+    input[type="range"]::-ms-fill-upper {
+        background: var(--color-range-input);
+        border: 0px solid #000000;
+        border-radius: 78px;
+        box-shadow: 0px 0px 0px #000000;
+    }
+    input[type="range"]::-ms-thumb {
+        box-shadow: 0px 0px 1px #000000;
+        border: 0px solid #000000;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 1.5rem;
+        background: #683af3;
+        cursor: pointer;
+    }
+    input[type="range"]:focus::-ms-fill-lower {
+        background: var(--color-range-input);
+    }
+    input[type="range"]:focus::-ms-fill-upper {
+        background: var(--color-range-input);
+    }
+}

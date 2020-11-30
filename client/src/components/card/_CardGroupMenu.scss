@@ -1,0 +1,67 @@
+.c-group-menu {
+    width: 100%;
+    height: 7rem;
+    background: var(--color-white);
+    box-shadow: var(--style-shadow);
+    padding: 0.5rem 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    transition: 0.2s ease-in-out;
+    margin-bottom: 0.7rem;
+
+    &:hover {
+        cursor: pointer;
+        position: relative;
+        box-shadow: var(--style-shadow-big);
+        z-index: 5;
+    }
+    &__adding {
+        display: flex;
+        align-items: center;
+        &--btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: var(--color-light-grey);
+            border: none;
+            border-radius: 20rem;
+            padding: 0.3rem;
+            margin-right: 1rem;
+        }
+    }
+
+    &.adding {
+        justify-content: center;
+    }
+    &__img {
+        width: 5rem;
+        height: 5rem;
+        margin-right: 2rem;
+    }
+    &__plus {
+        margin-right: 4.5rem;
+    }
+
+    &__left,
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+    &__right {
+        width: 2rem;
+        height: 2rem;
+        svg {
+            stroke: var(--color-dark-grey);
+        }
+    }
+
+    &__status {
+        margin-right: 1rem;
+
+        font-family: var(--font-bold);
+        color: var(--color-dark-grey);
+    }
+}

@@ -1,0 +1,49 @@
+.modal-confirm {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    right: 0;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    background: var(--color-backdrop);
+
+    .container {
+        background: white;
+        box-shadow: var(--style-shadow-big);
+        width: 55rem;
+
+        max-width: 100%;
+        padding: 3rem;
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &--title {
+            font-family: var(--font-bold);
+            font-size: 2.1rem;
+        }
+    }
+    &__msg {
+        display: block;
+        color: var(--color-dark-grey);
+        padding: 1rem 0;
+    }
+    &__btns {
+        margin-top: 2.5rem;
+        display: flex;
+        justify-content: flex-end;
+        button {
+            margin-left: 0.7rem;
+        }
+    }
+}

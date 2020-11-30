@@ -1,0 +1,11 @@
+.d-group {
+    position: absolute;
+    z-index: 4;
+    background: var(--color-backdrop);
+    height: 100%;
+    width: 100%;
+    font-family: var(--font-bold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

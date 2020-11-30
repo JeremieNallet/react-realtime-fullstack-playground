@@ -1,0 +1,39 @@
+.settings-nav {
+    background: white;
+    box-shadow: var(--style-shadow);
+    border-radius: 1rem;
+    top: 8rem;
+    padding: 1.2rem;
+    min-height: 20rem;
+
+    display: flex;
+    flex-direction: column;
+
+    position: sticky;
+
+    &__link {
+        padding: 1.5rem 1rem;
+
+        display: flex;
+        justify-content: space-between;
+        border-radius: 0.8rem;
+
+        &--name {
+            font-family: var(--font-bold);
+            color: var(--color-dark-grey);
+        }
+        &--arrow {
+            stroke: var(--color-dark-grey);
+        }
+        &.active &--name {
+            color: var(--color-primary);
+        }
+        &.active &--arrow {
+            stroke: var(--color-primary);
+        }
+
+        &.active {
+            background: var(--color-light-grey);
+        }
+    }
+}

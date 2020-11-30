@@ -1,0 +1,64 @@
+@mixin halosStyle {
+    background: var(--color-theme-1);
+    width: 12rem;
+    height: 12rem;
+    border-radius: 20rem;
+    position: absolute;
+    transform-style: preserve-3d;
+    box-shadow: var(--style-shadow-markers);
+    opacity: 0.07;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.pin-group {
+    background: var(--color-theme-1);
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 20rem;
+    transform: translate(-50%, -50%);
+    border: 0.7rem solid var(--color-white);
+    position: absolute;
+    transform-style: preserve-3d;
+    z-index: 1;
+    box-shadow: var(--style-shadow-markers);
+
+    &__letter {
+        color: white;
+        font-family: var(--font-bold);
+    }
+    &.far-distance {
+        height: 1rem;
+        width: 1rem;
+        background: var(--color-theme-1);
+        border: none;
+        span {
+            display: none;
+        }
+    }
+}
+.pin-group-halo-pulse {
+    will-change: transform;
+    animation: pulse 1.7s infinite ease-out;
+    @include halosStyle();
+}
+.pin-group-halo {
+    transform: translate(-50%, -50%);
+    @include halosStyle();
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.3;
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

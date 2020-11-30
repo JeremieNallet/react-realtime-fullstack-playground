@@ -1,0 +1,63 @@
+{
+    "name": "stumbly",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.3.2",
+        "@testing-library/user-event": "^7.1.2",
+        "axios": "^0.19.2",
+        "cloudinary-react": "^1.6.7",
+        "d3-ease": "^1.0.7",
+        "dayjs": "^1.8.29",
+        "emoji-mart": "^3.0.0",
+        "js-cookie": "^2.2.1",
+        "local-storage": "^2.0.0",
+        "lodash": "^4.17.20",
+        "mapbox": "^1.0.0-beta10",
+        "node-sass": "^4.14.1",
+        "react": "^16.13.1",
+        "react-device-detect": "^1.13.1",
+        "react-dom": "^16.13.1",
+        "react-facebook-login": "^4.1.1",
+        "react-google-login": "^5.1.20",
+        "react-helmet": "^6.1.0",
+        "react-hook-form": "^5.3.1",
+        "react-map-gl": "^5.2.5",
+        "react-paginate": "^6.5.0",
+        "react-query": "^2.23.1",
+        "react-query-devtools": "^2.6.0",
+        "react-router": "^5.2.0",
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "^3.4.3",
+        "react-spring": "^8.0.27",
+        "react-textarea-autosize": "^7.1.2",
+        "slugify": "^1.4.0",
+        "socket.io-client": "^2.3.0",
+        "use-onclickoutside": "^0.3.1",
+        "uuid": "^7.0.3",
+        "zustand": "^3.2.0"
+    },
+    "scripts": {
+        "dev": "REACT_APP_ENV=developement react-scripts start",
+        "prod": "REACT_APP_ENV=production react-scripts start",
+        "build": "react-scripts build npm version patch",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}

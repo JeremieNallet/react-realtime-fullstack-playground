@@ -1,0 +1,43 @@
+//- Email template adapted from https://github.com/leemunroe/responsive-html-email-template
+//- Converted from HTML using https://html2pug.now.sh/
+
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width')
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    title= subject
+    include _style
+  body
+    table.body(role='presentation', border='0', cellpadding='0', cellspacing='0')
+      tbody
+        tr
+          td
+          td.container
+            .header
+              table(role='presentation' border='0' cellpadding='0' cellspacing='0')
+                tr
+                  td.content-block
+                    img.logo(src='cid:logo' alt="logo" style='width:50px; height:50px')
+                    .logo-text(rel="nofollow" x-apple-data-detectors="false") stumbly.io
+            .content
+              table.main(role='presentation')
+                tbody
+                  tr
+                    td.wrapper
+                      table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+                        tbody
+                          tr
+                            td
+                              // CONTENT
+                              block content
+
+              // START FOOTER
+              .footer
+                table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+                  tbody
+                    tr
+                      td.content-block
+                        a.apple-link(href="mailto:hello@stumbly.io", target='_blank') hello@stumby.io
+        
+

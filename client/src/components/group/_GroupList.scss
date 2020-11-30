@@ -1,0 +1,199 @@
+@import "../../global.scss";
+
+$paddings: 0 2rem;
+$fromTop: 9rem;
+$inputsHeight: 5rem;
+
+.g-list {
+    width: 45rem;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: scroll;
+    padding-top: $fromTop;
+    z-index: 7;
+
+    box-shadow: var(--style-shadow-big);
+    animation: animatePannel 0.4s cubic-bezier(0.16, 0.02, 0, 1.12);
+    will-change: transform;
+
+    &__pannel-btn {
+        position: fixed;
+        z-index: 2;
+        top: 2.5rem;
+        left: 40rem;
+    }
+
+    .filter-pannel {
+        will-change: transform;
+        animation: animateFilter 0.3s cubic-bezier(0.16, 0.02, 0, 1.12);
+        margin: 1rem 0 2.5rem 0;
+        &.seeking {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .f-radius {
+            .container {
+                display: flex;
+                justify-content: space-between;
+            }
+            &--name {
+                font-size: 1.5rem;
+                color: var(--color-dark-grey);
+            }
+            &--distance {
+                color: var(--color-theme-1);
+                font-family: var(--font-bold);
+            }
+            @include rangeStyle;
+        }
+    }
+
+    &__nav {
+        height: fit-content;
+        margin-bottom: 2rem;
+        background: white;
+        position: sticky;
+        box-shadow: 0 0.8rem 1.3rem 0.5rem rgb(255, 255, 255);
+        z-index: 2;
+        top: -$fromTop;
+        padding: $paddings;
+
+        &--status {
+            display: block;
+            padding: 0.8rem 0.3rem;
+            font-size: 1.8rem;
+            font-family: var(--font-bold);
+            color: var(--color-dark-grey);
+            .interactive-span {
+                color: var(--color-primary);
+                text-decoration: underline;
+                cursor: pointer;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            .highlighted-span {
+                color: var(--color-primary);
+            }
+        }
+
+        &--search-input {
+            padding: 1rem 0;
+            input {
+                height: $inputsHeight;
+            }
+        }
+        &--current-position {
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+
+            span {
+                border-radius: 0.4rem;
+                display: flex;
+                align-items: center;
+                height: $inputsHeight;
+                width: 100%;
+                text-indent: 2rem;
+                color: var(--color-dark-grey);
+                font-family: var(--font-bold);
+                background: var(--color-light-grey);
+            }
+            button {
+                height: $inputsHeight - 0.2;
+                margin-left: 1rem;
+            }
+        }
+    }
+    &__items {
+        z-index: 1;
+        position: relative;
+        padding: $paddings;
+        margin-bottom: 3.5rem;
+        .loading-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-top: 5vh;
+        }
+    }
+}
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 5rem;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+    background: var(--color-white);
+    box-shadow: var(--style-shadow);
+    user-select: none;
+
+    li {
+        background: white;
+        border: none;
+        border-radius: 0.9rem;
+        padding: 0.1rem 0.4rem;
+        margin: 0 0.2rem;
+        font-family: var(--font-bold);
+        font-size: 1.4rem;
+        cursor: pointer;
+
+        &.active {
+            border: 1px solid var(--color-theme-1);
+            color: var(--color-theme-1);
+        }
+    }
+    .previous,
+    .next {
+        &:hover {
+            opacity: 0.7;
+            user-select: none;
+        }
+    }
+
+    .previous {
+        position: absolute;
+        left: 3rem;
+        &.disabled {
+            opacity: 0.2;
+        }
+    }
+    .next {
+        position: absolute;
+        right: 3rem;
+        &.disabled {
+            opacity: 0.2;
+        }
+    }
+}
+@keyframes animateFilter {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -2.5rem, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0rem, 0);
+    }
+}
+
+@keyframes animatePannel {
+    from {
+        opacity: 0;
+        transform: translate3d(-2rem, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0rem, 0, 0);
+    }
+}

@@ -1,0 +1,59 @@
+@import "../../global.scss";
+.delete-message {
+    margin-bottom: 5rem;
+    color: var(--color-theme-2);
+}
+.modal-delete-account {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--color-backdrop);
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    padding: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.error {
+        .modal-delete-account__help {
+            color: var(--color-theme-2);
+        }
+    }
+
+    &__text {
+        margin-bottom: 1rem;
+    }
+    &__input {
+        border: 1px solid var(--color-dark-grey);
+        height: 4rem;
+        border-radius: 0.5rem;
+        width: 100%;
+        text-indent: 2rem;
+        font-size: 1.6rem;
+        margin-top: 1rem;
+        @include media(xs) {
+            width: 100%;
+        }
+        &:focus {
+            border: 1px solid var(--color-theme-1);
+        }
+    }
+    &__help {
+        display: block;
+        width: 100%;
+        margin-top: 1rem;
+        font-family: var(--font-bold);
+        color: var(--color-dark-grey);
+    }
+    &__btns {
+        display: flex;
+        margin-top: 5rem;
+        button {
+            &:first-child {
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}

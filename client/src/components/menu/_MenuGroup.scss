@@ -1,0 +1,36 @@
+.dropdown-group {
+    &__content {
+        overflow: hidden;
+    }
+    &__create {
+        z-index: 99;
+        position: sticky;
+        width: 100%;
+        bottom: 0;
+        background: white;
+        padding-top: 2rem;
+        margin-top: 2rem;
+        box-shadow: var(--style-shadow);
+        &--btn {
+            background: var(--color-theme-2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 5.5rem;
+            border-radius: 0.7rem;
+            width: 100%;
+            border: none;
+            color: white;
+            font-family: var(--font-bold);
+            cursor: pointer;
+            svg {
+                stroke: white;
+                width: 1.9rem;
+                margin-right: 1rem;
+            }
+            &:hover {
+                filter: brightness(96%);
+            }
+        }
+    }
+}

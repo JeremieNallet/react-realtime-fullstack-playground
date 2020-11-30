@@ -1,0 +1,32 @@
+.dashboard-chat {
+    &__m {
+        background: white;
+        // height: calc(100vh - 10rem);
+        height: calc(var(--vh, 1vh) * 100 - 6rem);
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        &--head {
+            background: white;
+            display: flex;
+            align-items: center;
+            box-shadow: var(--style-shadow);
+            padding: 1rem;
+            z-index: 1;
+            position: relative;
+            &--txt {
+                font-family: var(--font-bold);
+                margin-left: 1rem;
+                font-size: 1.4rem;
+            }
+        }
+    }
+    &__loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+}

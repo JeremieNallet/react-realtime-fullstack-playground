@@ -1,0 +1,12 @@
+.forgot-pw {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem 0 1.5rem 0;
+    font-size: 1.35rem;
+    &--link {
+        width: fit-content;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}

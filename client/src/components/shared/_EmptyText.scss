@@ -1,0 +1,8 @@
+.empty-text {
+    font-family: var(--font-bold);
+
+    &.action {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}

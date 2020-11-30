@@ -1,0 +1,22 @@
+@import "../../global.scss";
+.header {
+    height: 7.8rem;
+    width: 100vw;
+    padding: 0 3rem 0 2rem;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 5;
+    pointer-events: none;
+    &.adding-pos {
+        opacity: 0.2;
+
+        .header-infos {
+            pointer-events: none;
+        }
+        .header-menu {
+            pointer-events: none;
+        }
+    }
+}

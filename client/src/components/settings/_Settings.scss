@@ -1,0 +1,23 @@
+.settings {
+    display: flex;
+    margin: auto;
+    max-width: 110rem;
+    padding: 12rem 3rem 0 3rem;
+    &.m {
+        padding: 8rem 1rem 0 1rem;
+    }
+    &__side {
+        flex: 0 0 27rem;
+        margin-right: 2rem;
+    }
+    &__content {
+        flex: 1;
+    }
+    &__loading {
+        height: calc(100vh - 20rem);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

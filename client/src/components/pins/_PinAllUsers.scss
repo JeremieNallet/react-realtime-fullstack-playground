@@ -1,0 +1,33 @@
+.pin-all-users {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 4rem;
+    border: 0.6rem solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--style-shadow-markers);
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    &.far-distance {
+        height: 1rem;
+        width: 1rem;
+        background: var(--color-primary);
+        border: none;
+        img {
+            display: none;
+        }
+    }
+
+    &__img {
+        width: 110%;
+        height: 110%;
+    }
+    &:hover {
+        transform: translate(-50%, -50%) scale(1.3);
+        cursor: pointer;
+    }
+}

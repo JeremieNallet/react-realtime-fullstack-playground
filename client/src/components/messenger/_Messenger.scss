@@ -1,0 +1,97 @@
+.messenger {
+    display: flex;
+    .active {
+        .c-global {
+            transform: scale(1.02);
+            box-shadow: var(--style-shadow-big);
+        }
+    }
+    &__loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    &__skeleton {
+        width: 100%;
+        height: calc(100vh - 18rem);
+        background: var(--color-light-grey);
+        margin-bottom: 2rem;
+        border-radius: 2rem;
+    }
+    &__empty-m {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-family: var(--font-bold);
+    }
+    &__title {
+        display: block;
+        font-size: 2rem;
+        font-family: var(--font-bold);
+        padding-bottom: 1.5rem;
+    }
+
+    &.m {
+        width: 200vw;
+        height: calc(100% - 4rem);
+        height: -ms-calc(100% - 4rem);
+        margin-top: 4rem;
+        .messenger {
+            &__nav {
+                flex: initial;
+                box-shadow: none;
+                width: 100vw;
+                height: initial;
+                padding: 3rem 1rem 0 1rem;
+            }
+            &__content {
+                width: 100vw;
+            }
+            &__title {
+                display: none;
+            }
+        }
+    }
+
+    &__nav {
+        background: white;
+        box-shadow: var(--style-shadow);
+        flex: 0 0 45rem;
+        padding: 10rem 2rem 0 2rem;
+        z-index: 1;
+        overflow: scroll;
+        position: relative;
+        height: 100vh;
+        padding-bottom: 5.5rem;
+        &--loading {
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__content {
+        flex: 1;
+    }
+    &__preview {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(20rem + 10vw);
+
+            flex-direction: column;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

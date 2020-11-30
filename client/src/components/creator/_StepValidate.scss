@@ -1,0 +1,19 @@
+.step-validate {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    padding: 5rem 0 10rem 0;
+    overflow: scroll;
+
+    &__map {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100vw;
+    }
+}
